@@ -4,15 +4,15 @@
 ```gherkin
 Scenario Outline: Create Badge Issuer
 
-Given I am a signed in user with <role>
-Given that a BadgeIssuer with <name> <IsExisting>
-When I add a BadgeIssuer with <name>
+Given I am a signed in user with <Role>
+Given that a BadgeIssuer with <Name> <IsExisting>
+When I add a BadgeIssuer with <Name>
 Then a BadgeIssuer is <IsCreated>
 
 Examples
 ```
 
-| &lt;role&gt; | &lt;name&gt; | &lt;IsExisting&gt; | &lt;IsCreated&gt; |
+| Role | Name | IsExisting | IsCreated |
 | --- | --- | --- | --- |
 | TalentManager | CertifyMe | False | True |
 | TalentManager | CertifyMe | True | False |
@@ -32,7 +32,7 @@ Examples
 
 ```
 
-| &lt;Role | &lt;Name&gt; | &lt;NewName&gt; | &lt;IsExisting&gt; | &lt;IsUpdated&gt; |
+| Role | Name | NewName | IsExisting | IsUpdated |
 | --- | --- | --- | --- | --- |
 | TalentManager | CertifyMe | CertifyYou | False | True |
 | TalentManager | CertifyMe | CertifyYou | True | False |
@@ -51,7 +51,7 @@ Then a BadgeIssuer is <IsDeleted>
 Examples
 ```
 
-| &lt;Role&gt; | &lt;Name&gt; | &lt;IsExisting&gt; | &lt;IsDeleted&gt; |
+| Role | Name | IsExisting | IsDeleted |
 | --- | --- | --- | --- |
 | TalentManager | DeleteTest | False | False |
 | TalentManager | DeleteTest | True | True |
